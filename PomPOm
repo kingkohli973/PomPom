@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PomPom — Home</title>
+  <style>
+    :root{--accent:#0077ff;--bg:#f5f7fb;--card:#ffffff}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#111}
+    .wrap{max-width:1000px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#00aaff);color:#fff}
+    header h1{margin:0;font-size:22px}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:14px;font-weight:600}
+    .hero{margin-top:28px;background:var(--card);padding:28px;border-radius:12px;box-shadow:0 8px 20px rgba(11,22,40,0.06)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 16px rgba(12,24,40,0.04)}
+    footer{margin-top:28px;text-align:center;color:#666;font-size:14px}
+    a.button{display:inline-block;padding:10px 16px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
+    @media (max-width:520px){header{flex-direction:column;align-items:flex-start}nav{margin-top:8px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>PomPom</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Hello — welcome to PomPom</h2>
+      <p style="color:#444;margin-top:8px">A clean, professional site. Use this as a portfolio, small business page, or landing page.</p>
+      <div style="margin-top:14px">
+        <a class="button" href="#projects">See Projects</a>
+      </div>
+
+      <div class="grid" id="projects">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>Short description of a project or feature. Add images or links as needed.</p>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>Another project — explain what it does and why it’s useful.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:18px">
+      <div class="card" id="about">
+        <h3>About PomPom</h3>
+        <p>I build things people enjoy. Replace this text with your own bio, services, or portfolio summary.</p>
+      </div>
+
+      <div class="card" id="contact" style="margin-top:12px">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:hello@pompom.tk">hello@pompom.tk</a></p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> PomPom — Made with ❤️
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
